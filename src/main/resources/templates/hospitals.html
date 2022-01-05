@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <link href="css/hospitals.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals</title>
+    </script>
+</head>
+<body>
+                 
+
+	<div layout:fragment="hospitals">
+        <p class="add-btn">Hospitals</p>
+    <div style="height: 100vh; width: 100%;" th:if="${hospitals}">
+        
+        <div class="job-card">
+            <div th:each="hospital: ${hospitals}" class="i-card" >
+        
+                <h3 th:text="${hospital.name}">Title</h3>
+                <br>
+                <h4>Address</h4>
+                <p th:text="${hospital.address}">Qualifications</p>
+                <br>
+                <h4>Areas served</h4>
+                <p th:text="${hospital.areas}">Experience</p>
+                <br>
+                <h4>Contact Number</h4>
+                <p th:text="${hospital.contact}">Location</p>
+                <br>
+                <h4>Website</h4>
+                <p th:text="${hospital.website}">Salary</p>
+                <br>
+                <h4>Availabilty for COVID-19 Treatment</h4>
+                <p th:text="${hospital.covid}">Salary</p>
+                <br>
+            </div>
+        </div>
+    </div>
+	</div>
+</body>
+</html>

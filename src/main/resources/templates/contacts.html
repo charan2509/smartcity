@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="default">
+<head>
+    <link rel="stylesheet" href="css/contact.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script>
+        function myAlert() {
+          alert("Your data is submitted successfully!");
+        }
+        </script>
+
+</head>
+<body>
+    <div layout:fragment="contacts">
+    <div class="container">
+        <form method="post" th:action="@{/contacts}">
+            <h2>Contact Us</h2>
+            <br>
+            <input type="text" name="email" required placeholder="E-mail"/>
+            <br>
+            <br>
+            <input type="text" name="name" required placeholder="Full Name"/>
+            <br>
+            <br>
+            <input type="text" name="mobile" required placeholder="Mobile Number"/>
+            <br>
+            <br>
+            <textarea name="desc" required placeholder="Write something here ..."></textarea>
+            <br>
+            <br>
+            <button onClick="myAlert()" class="btn"type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

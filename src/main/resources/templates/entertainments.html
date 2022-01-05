@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <link href="css/entertainments.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment</title>
+    </script>
+</head>
+<body>
+                 
+
+	<div layout:fragment="entertainments">
+        <p class="add-btn">Entertainment</p>
+    <div style="height: 100vh; width: 100%;" th:if="${entertainments}">
+        
+        <div class="job-card">
+            <div th:each="entertainment: ${entertainments}" class="i-card" >
+        
+                <h3 th:text="${entertainment.title}">Title</h3>
+                <br>
+                <h4>Description</h4>
+                <p th:text="${entertainment.desc}">Qualifications</p>
+                <br>
+                <h4>Address</h4>
+                <p th:text="${entertainment.address}">Experience</p>
+                <br>
+                <h4>Timings</h4>
+                <p th:text="${entertainment.timings}">Location</p>
+                <br>
+                <h4>Ratings</h4>
+                <p th:text="${entertainment.ratings}">Salary</p>
+                
+            </div>
+        </div>
+    </div>
+	</div>
+</body>
+</html>

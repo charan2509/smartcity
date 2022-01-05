@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <link href="css/app.css" rel="stylesheet">
+
+
+</head>
+<div class="container">
+<body>
+    <div layout:fragment="content" class="signup">
+        <div class="container">
+            <form th:action="@{/signup}" class="signin" method="post">
+                <h2>SignUp here</h2>
+                <br>
+                <div th:if="${param.error}">
+                    Invalid email and password.
+                </div>
+                <div th:if="${param.logout}">
+                    You have been logged out.
+                </div>
+               
+                    <input type="email" name="email" id="inputEmail"  placeholder="Email" required>
+               
+                    <br><br>
+
+                    <input type="password" name="password" id="inputPassword" placeholder="Password" required>
+             
+                    <br><br>
+                    <input type="password" placeholder="Confirm password" required>
+             
+                    <br><br>
+                    <input type="text" name="fullname" id="inputFullName"  placeholder="Full Name" required>
+                    <br><br>
+                    <button type="submit">SignUp</button>
+            </form>
+            <br>
+            <br>
+            <!-- <form th:action="@{/login}" class="signin" method="get">
+
+                <button id="btn1"type="submit" >SignIn Here</button>
+                
+            </form> -->
+            <p>Already have an account <a th:href="@{/login}">login</a></p>
+        </div>
+    </div>
+</body>
+</div>
+</html>

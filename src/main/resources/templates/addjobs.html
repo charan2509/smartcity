@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="default">
+<head>
+    <link rel="stylesheet" href="/css/add.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Jobs</title>
+</head>
+<body>
+    
+    <div class="add-crd" layout:fragment="addjobs">
+    <form th:action="@{/addjobs}" method="post">
+        <h3>Add a new Job</h3>
+        <br>
+        <input type="text" required name="title" placeholder="Title"/>
+        <br>
+        <br>
+        <input type="text" required name="qualifications" placeholder="Qualifications"/>
+        <br>
+        <br>
+        <input type="text" required name="experience" placeholder="Experience"/>
+        <br>
+        <br>
+        <input type="text" required name="location" placeholder="Location"/>
+        <br>
+        <br>
+        <input type="text" required name="salary" placeholder="Salary"/>
+        <br>
+        <br>
+        <textarea type="text" required name="desc" placeholder="Description"></textarea>
+        <br>
+        <br>
+        <button class="btn"type="submit">Add</button>
+    </form>
+    </div>
+    
+</body>
+</html>

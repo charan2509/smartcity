@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <link href="css/hotels.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+</head>
+<body>
+   
+                                  
+
+	<div layout:fragment="hotels">
+        <p class="add-btn">Hotels</p>
+    <div style="height: 100vh; width: 100%;" th:if="${hotels}">
+        
+        <div class="job-card">
+            <div th:each="hotel: ${hotels}" class="i-card" >
+                <h3 th:text="${hotel.name}">Name</h3>
+                <br>
+                <h4>Location</h4>
+                <p th:text="${hotel.location}">Location</p>
+                <br>
+                <h4>Category</h4>
+                <p th:text="${hotel.category}">Category</p>
+                <br>
+                <h4>Rating</h4>
+                <p th:text="${hotel.rating}">Rating</p>
+                <br>
+                <h4>Price per day</h4>
+                <p th:text="${hotel.rent}">Rating</p>
+
+                
+            </div>
+        </div>
+    </div>
+	</div>
+</body>
+</html>

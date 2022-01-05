@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <link href="css/home.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    
+</head>
+<body>
+    <div  layout:fragment="content">
+        
+        <div class="addesh">
+            <h2>Administrator Dashboard</h2>
+            <br>
+        <a class="adders"th:href="@{/addjobs}">+ Add new Job vacancies</a>
+        <br><br>
+        <a class="adders"th:href="@{/addunis}">+ Add new Universities</a>
+        <br><br>
+        <a class="adders"th:href="@{/addhotels}">+ Add new Hotels</a>
+        <br><br>
+        <a class="adders"th:href="@{/addtours}">+ Add new Tourist places</a>
+        <br><br>
+        <a class="adders"th:href="@{/addhospitals}">+ Add new Hospitals</a>
+        <br><br>
+        <a class="adders"th:href="@{/addentertainments}">+ Add new Places</a>
+        <br><br><br>
+        <button class="seall"onclick="location.href='/allcontacts'">See All Contact Information</button>
+    </div>
+    <br>
+
+      
+    </div>
+    
+
+</body>
+</html>

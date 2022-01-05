@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');  
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+.job-card{
+    display: grid;
+    column-count:3; 
+    padding: 10px;
+    width: 100%;
+    grid: 640px / auto auto auto;
+    grid-row-gap: 20px;
+    
+}
+.i-card{
+    padding: 20px;
+    border-radius:15px;
+    font-size:large;
+     background-color: #f1f1f1;
+     box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.397);
+     margin: 10px;
+     height: 640px;
+}
+.i-card:hover{
+    background-color: #cfcfcf;
+    transition:0.7s;
+}
+.add-btn{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    margin:50px;
+    font-size: x-large;
+    color: #4285f4;
+
+}
+
+.txt{
+    line-height:1.7;
+}

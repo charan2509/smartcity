@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="default">
+<head>
+    <link rel="stylesheet" href="/css/add.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add University</title>
+</head>
+<body>
+    <div class="add-crd" layout:fragment="addunis">
+    <form th:action="@{/addunis}" method="post">
+        <h3>Add a new University</h3>
+        <br>
+        <input type="text" required name="name" placeholder="Name"/>
+        <br>
+        <br>
+        <input type="text" required name="location" placeholder="Location"/>
+        <br>
+        <br>
+        <input type="text" required name="branches" placeholder="Courses Offered"/>
+        <br>
+        <br>
+        <input type="text" required name="contact" placeholder="Contact"/>
+        <br>
+        <br>
+        <input type="text" required name="rating" placeholder="NAAC Rating"/>
+        <br>
+        <br>
+        <input type="text" required name="estd" placeholder="Year of establishment"/>
+        <br>
+        <br>
+
+        <button class="btn" type="submit">Add</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <link href="css/jobs.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+    </script>
+</head>
+<body>
+   
+                                  
+
+	<div layout:fragment="jobs">
+        <p class="add-btn">Job Vacancies</p>
+    <div style="height: 100vh; width: 100%;" th:if="${jobs}">
+        
+        <div class="job-card">
+            <div th:each="job: ${jobs}" class="i-card" >
+        
+                <h3 th:text="${job.title}">Title</h3>
+                <br>
+                <h4>Qualifications</h4>
+                <p th:text="${job.qualifications}">Qualifications</p>
+                <br>
+                <h4>Work Experience</h4>
+                <p th:text="${job.experience}">Experience</p>
+                <br>
+                <h4>Location</h4>
+                <p th:text="${job.location}">Location</p>
+                <br>
+                <h4>Salary</h4>
+                <p th:text="${job.salary}">Salary</p>
+                <br>
+                <h4>Description</h4>
+                <p th:text="${job.desc}" class="txt" >Salary</p>
+                <br>
+            </div>
+        </div>
+    </div>
+	</div>
+</body>
+</html>

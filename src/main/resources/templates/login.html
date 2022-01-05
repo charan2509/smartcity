@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<div class="container">
+<body>
+    <div layout:fragment="content">
+        <div class="signup">
+            <form th:action="@{/login}" class="signin" method="post">
+                
+                <h2>SignIn Here</h2>
+<br>
+                <div th:if="${param.error}">
+                    Invalid email and password.
+                </div>
+
+                <div th:if="${param.logout}">
+                    You have been logged out.
+                </div>
+
+                    
+                    <input type="email" name="email" id="inputEmail"  placeholder="Email" required>
+              
+                <br>
+                <br>
+                    <input type="password" name="password" id="inputPassword"  placeholder="Password" required>
+          <br>
+          <br>
+                <button type="submit" >SignIn as a Admin</button>
+            </form>
+            <br>
+            <button class="lg-btn" onclick="location.href='/home'">SignIn as a Guest</button>
+            <br>
+            <p>Don't have an account <a th:href="@{/signup}">Signup</a></p>
+        </div>
+    </div>
+</body>
+</div>
+</html>

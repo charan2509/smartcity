@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <link href="css/home.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    
+</head>
+<body>
+    <div layout:fragment="content">
+        
+   
+      
+<br>
+        <div class="content">
+            <h1 class="he"th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+            <br><br>
+            <image class="main-img" src="images/hcity.svg"/>
+            
+            
+        </div>
+        <br><br>
+        <div class="about-us">
+            <h2 class="he">About SmartCity</h2>
+            <div class="at">
+            <p class="abt">
+                Smart City is a web-based Application which stores the details of a city. 
+                The main purpose of this project to help the Students, Job seekers and 
+                other visitors to the city by providing information about hotels, transportation 
+                facilities , Tourist places, Educational Institutions, job openings, etc. 
+                The Smart City project serves the visitors as a guide of the city
+
+            </p>
+            <image class="sgv" src="images/city.svg"/>
+        </div>
+        <br>
+        <h2 style="padding: 20px;">Services provided by SmartCity,</h2>
+<br>
+
+        <div class="crd-main">
+        <div class="crd" onclick="location.href='/jobs'">
+            
+            <image class="crd-img" src="images/job.svg"/>
+            <br>
+            <p>Jobs</p>
+        </div>
+        <div class="crd" onclick="location.href='/unis'">
+            <image class="crd-img" src="images/education.svg"/>
+            <br>
+            <p>Education</p>
+        </div>
+        <div class="crd" onclick="location.href='/hotels'">
+            <image class="crd-img"src="images/hotel.svg"/>
+            <br>
+            <br><br>
+            <p>Hotels</p>
+        </div>
+        <div class="crd" onclick="location.href='/tours'">
+            <image class="crd-img" src="images/tour.svg"/>
+            <br>
+            <p>Tourism</p>
+        </div>
+        </div>
+        <br>
+        <br><br>
+
+        <div class="sdo">
+        <div class="sdo-cnt">
+            <br>
+        <h3>Job Vacancies</h3>
+        <br>
+        <p>
+            You can find various job openings and access the information about the job offerings present
+            in the city this service helps you to find jobs more quickly and efficiently
+
+        </p>
+        <br>
+        </div>
+        
+        <br>
+
+        <div class="sdo-cnt">
+        <br>
+        <h3>Education</h3>
+        <br>
+        <p>
+            You can find all the schools and universities present in the city this makes it easy for students
+            to get better access to the information about the educational Institutions 
+
+        </p>
+        <br>
+        </div>
+
+        <br>
+
+        <div class="sdo-cnt">
+        <br>
+        <h3>Hotels and Resturants</h3>
+        <br>
+        <p>
+            You can use this service to find various hotels and restaurants present in the city
+            this can help you if you are person who is stranger to the city, By using this serice you can find the hotel
+            and restaurants which are near to your locations
+
+        </p>
+       
+        <br>
+       </div>
+
+       <br>
+
+       <div class="sdo-cnt">
+           <br>
+        <h3>Tourism</h3>
+        <br>
+        <p>
+            You can find the popular locations which are popular in the city using this service, This can help you
+            to find the best destination for your taste and can help you to enjoy your holiday time in a
+            better way
+
+        </p>
+        <br>
+        </div>
+
+        <br>
+        <br>
+        <h2>Our Team</h2>
+        <br>
+        <image style="width:75%;height:auto;" src="images/team.svg"/>
+        <br><br>
+    </div>
+        <div class="crd-main1">
+            <div class="crd1">
+                <image class="crd-img1" src="images/profile.svg"/>
+                <br>
+                <h3>Deepak</h3>
+                <br>
+                <h3>Contact Information</h3>
+                <br>
+                <p>deepumaximus@gmail.com</p>
+               
+                <br>
+            </div>
+            <div class="crd1">
+                <image class="crd-img1"src="images/profile.svg"/>
+                <br>
+                 <h3> Hari Charan</h3>
+                <br>
+                <h3>Contact Information</h3>
+                <br>
+                <p>haricharan7701@gmail.com</p>
+                <br>
+
+            </div>
+            </div>
+            <br><br>
+            <form th:action="@{/contacts}" method="get">
+        <button type="submit" class="cnt">ContactUs</button>
+    </form>
+    
+
+</body>
+</html>

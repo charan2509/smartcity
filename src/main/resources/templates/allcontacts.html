@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <link href="css/allcontacts.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+    </script>
+</head>
+<body>
+   
+                                  
+
+	<div layout:fragment="allcontacts">
+    <div style="height: 100vh; width: 100%;" th:if="${allcontacts}">
+        
+        <div class="job-card">
+            <div th:each="allcontact: ${allcontacts}" class="i-card" >
+                <h3>Contact Info</h3>
+                <br>
+                <h4>Name</h4>
+                <p th:text="${allcontact.email}"></p>
+                <br>
+                <h4>E-Mail</h4>
+                <p th:text="${allcontact.name}">Qualifications</p>
+                <br>
+                <h4>Mobile Number</h4>
+                <p th:text="${allcontact.mobile}">Qualifications</p>
+                <br>
+                <h4>Decription</h4>
+                <p th:text="${allcontact.desc}">Qualifications</p>
+            
+            </div>
+        </div>
+    </div>
+	</div>
+</body>
+</html>

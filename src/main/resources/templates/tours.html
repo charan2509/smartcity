@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <link href="css/tours.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title>
+</head>
+<body>
+   
+                                  
+    
+	<div layout:fragment="tours">
+        <p class="add-btn">Tourist Places</p>
+    <div style="height: 100vh; width: 100%;" th:if="${tours}">
+        
+        <div class="job-card">
+            <div th:each="tour: ${tours}" class="i-card" >
+                <h3 th:text="${tour.name}">Name</h3>
+                <br>
+                <h4>Known For</h4>
+                <p th:text="${tour.famous}">Famous</p>
+                <br>
+                <h4>Location</h4>
+                <p th:text="${tour.location}">Location</p>
+                <br>
+                <h4>Opening Timings</h4>
+                <p th:text="${tour.timings}">Timings</p>
+                <br>
+                <h4>Ratings</h4>
+                <p th:text="${tour.ratings}">Timings</p>
+                <br>
+                <h4>Description</h4>
+                <p th:text="${tour.desc}" class="txt">Timings</p>
+            </div>
+        </div>
+    </div>
+	</div>
+</body>
+</html>

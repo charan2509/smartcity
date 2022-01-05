@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/header.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+             
+               <header class="header"> 
+                    <h1>Smart City</h1>
+                        <div class="search" > 
+                            <input type="text" class="srch"placeholder="Search"/>
+                        </div>
+                    <span style="flex: 1 auto;"></span>
+                    
+                    <div class="nav-link" >
+                    <a class="nav-link" href="/home">Home </a>
+                    </div>
+
+                    <div class="nav-link" >
+                        <a class="nav-link" href="/dashboard">Dashboard </a>
+                        </div>
+                    
+                    <div  style="display: flex;align-items: center">
+                        <a class="nav-link" th:text="${fullName}" ></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <form th:action="@{/logout}" method="post">
+                          <button class="sg-btn"type="submit" value="Sign Out">Sign Out</button>
+                        </form>
+                    </div>
+                   
+            </header>
+            <div class="smbr" >
+                <div>
+                <a class="sl" tabindex="1" style="font-size: larger; font-weight: 400;" href="/jobs">Job Vacancies</a>
+                <a class="sl" tabindex="1" style="font-size: larger; font-weight: 400;" href="/hospitals">Hospitals</a>  
+                <a class="sl" tabindex="1" style="font-size: larger; font-weight: 400;" href="unis">Education</a>         
+                <a class="sl" tabindex="1" style="font-size: larger; font-weight: 400;" href="hotels">Hotels</a> 
+                <a class="sl" tabindex="1" style="font-size: larger; font-weight: 400;" href="/tours">Tourism</a>
+                <a class="sl" tabindex="1" style="font-size: larger; font-weight: 400;" href="/entertainments">Entertainment</a>           
+            </div>
+            </div>
+        </div>
+                                         
+    
+
+    <div class="cont">
+        <div layout:fragment="content"></div>
+
+        <div layout:fragment="jobs"></div>
+        <div layout:fragment="unis"></div>
+        <div layout:fragment="tours"></div>
+        <div layout:fragment="hotels"></div>
+        <div layout:fragment="home"></div>
+        <div layout:fragment="addjobs"></div>
+        <div layout:fragment="addunis"></div>
+        <div layout:fragment="addtours"></div>
+        <div layout:fragment="addhotels"></div>
+        <div layout:fragment="contacts"></div>
+        <div layout:fragment="allcontacts"></div>
+        <div layout:fragment="allhospitals"></div>
+        <div layout:fragment="hospitals"></div>
+        <div layout:fragment="entertainments"></div>
+        <div layout:fragment="addentertainments"></div>
+        
+        
+        
+    </div>
+</body>
+</html>
